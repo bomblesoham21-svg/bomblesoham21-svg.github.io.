@@ -2,250 +2,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <style>
-    :root {
-      --bg: #0b0d10;
-      --bg-soft: #12151b;
-      --card: rgba(255,255,255,0.06);
-      --text: #e6e8eb;
-      --muted: #9aa0aa;
-      --accent: #5eff9c;
-      --border: rgba(255,255,255,0.12);
-      --blur: blur(14px);
-      --radius: 16px;
-      --radius-sm: 10px;
-      --transition: all 0.35s ease;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, #182032 0%, transparent 40%),
-                  radial-gradient(800px 500px at 90% 10%, #0f2b1c 0%, transparent 45%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ---------------- HEADER ---------------- */
-    header {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    header h1 {
-      font-size: clamp(2.4rem, 5vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    header p {
-      margin-top: 16px;
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* ---------------- NAV ---------------- */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      padding: 14px 20px;
-      background: rgba(11,13,16,0.65);
-      backdrop-filter: var(--blur);
-      border-bottom: 1px solid var(--border);
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: var(--transition);
-      position: relative;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: var(--transition);
-    }
-
-    nav a:hover {
-      color: var(--text);
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    /* ---------------- SECTIONS ---------------- */
-    section {
-      max-width: 960px;
-      margin: auto;
-      padding: 90px 20px;
-    }
-
-    section h2 {
-      font-size: 1.9rem;
-      font-weight: 600;
-      margin-bottom: 28px;
-      letter-spacing: -0.01em;
-    }
-
-    /* ---------------- CARD ---------------- */
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-      backdrop-filter: var(--blur);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      transition: var(--transition);
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(94,255,156,0.4);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
-    }
-
-    /* ---------------- LIST ---------------- */
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      padding-left: 18px;
-      position: relative;
-      margin-bottom: 12px;
-      color: var(--muted);
-    }
-
-    li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-
-    /* ---------------- LINKS ---------------- */
-    .links a {
-      display: inline-block;
-      margin-right: 18px;
-      margin-top: 10px;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .links a:hover {
-      opacity: 0.75;
-      transform: translateY(-2px);
-    }
-
-    /* ---------------- FOOTER ---------------- */
-    footer {
-      text-align: center;
-      padding: 50px 20px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    /* ---------------- RESPONSIVE ---------------- */
-    @media (max-width: 600px) {
-      nav {
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-
-      section {
-        padding: 70px 18px;
-      }
-    }
-  </style></head>
-<body><header>
-  <div>
-    <h1>Soham Bomble</h1>
-    <p></p>
+  <title>About Me</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">  <!-- External CSS -->  <link rel="stylesheet" href="style.css" />
+</head>
+<body><header class="hero focus">
+  <div class="hero-inner">
+    <h1>Your Name</h1>
+    <p>Learning, building, and refining systems over time.</p>
   </div>
-</header><nav>
+</header><nav class="nav">
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#philosophy">Philosophy</a>
   <a href="#contact">Contact</a>
-</nav><section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      Interested in technology, security, and how complex systems behave.
-      I’m focused on learning how things work at a fundamental level — especially in technology and security.
-I prefer understanding systems deeply rather than skimming tools. Most of my time goes into learning, experimenting, and refining how I think and work.
-I’m not in a rush to present outcomes. I’m more interested in building the foundation correctly.
-    </p>
-  </div>
-</section><section id="skills">
-  <h2>Skills & Interests</h2>
-  <div class="card">
-    <ul>
-      <li>Programming & Technology</li>
-      <li>Gaming</li>
-      <li>Physics, Space, Philosophy</li>
-      <li>A little of cybersecurity</li>
-      <li>Image Editing</li>
-    </ul>
-  </div>
-</section><section id="projects">
-  <h2>Projects</h2>
-  <div class="card">
-    <p><strong>Project Name</strong></p>
-    <p>A concise explanation of what you’re building or researching.</p>
-  </div>
-</section><section id="philosophy">
-  <h2>Beliefs & Philosophy</h2>
-  <div class="card">
-    <p>
-      I value clarity over noise, consistency over motivation, and understanding over appearance.
-I’m more interested in becoming precise than impressive.
-    </p>
-  </div>
-</section><section id="contact">
-  <h2>Find Me</h2>
-  <div class="card links">
-    <a href="#"></a>
-    <a href="#">X / Twitter</a>
-    <a href="#">Instagram</a>
-    <a href="bomblesoham21@gmail.com">Email</a>
-    <a href="N3ur0nVoid-X@proton.me">Proton Mail</a>
-  </div>
-</section><footer>
+</nav><main>
+  <section id="about" class="section">
+    <div class="content">
+      <h2>About Me</h2>
+      <p>
+        I focus on understanding systems deeply—especially in technology and security.
+        I value foundations, patience, and consistency over rushing outcomes.
+      </p>
+    </div>
+  </section>  <section id="skills" class="section">
+    <div class="content">
+      <h2>Skills & Interests</h2>
+      <ul>
+        <li>Programming fundamentals & web systems</li>
+        <li>Exploring cybersecurity concepts</li>
+        <li>Physics, space, and philosophy</li>
+        <li>Discipline and long-term consistency</li>
+      </ul>
+    </div>
+  </section>  <section id="projects" class="section">
+    <div class="content">
+      <h2>Projects</h2>
+      <p><strong>Personal Web Presence</strong></p>
+      <p>A continuously evolving site to experiment with clarity, design, and structure.</p>
+    </div>
+  </section>  <section id="philosophy" class="section">
+    <div class="content">
+      <h2>Philosophy</h2>
+      <p>
+        Clarity over noise. Consistency over motivation. Precision over appearance.
+      </p>
+    </div>
+  </section>  <section id="contact" class="section">
+    <div class="content">
+      <h2>Find Me</h2>
+      <div class="links">
+        <a href="#">GitHub</a>
+        <a href="#">Instagram</a>
+        <a href="#">X / Twitter</a>
+        <a href="mailto:youremail@example.com">Email</a>
+      </div>
+    </div>
+  </section>
+</main><footer>
   <p>© 2026 — Built deliberately.</p>
-</footer></body>
+</footer><script>
+  const sections = document.querySelectorAll('.section');
+  const options = { threshold: 0.35 };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, options);
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</body>
 </html>
