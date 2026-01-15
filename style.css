@@ -1,0 +1,119 @@
+:root {
+  --bg: #0b0d10;
+  --bg-soft: #11141a;
+  --text: #e6e8eb;
+  --muted: #9aa0aa;
+  --accent: #7cf5b2;
+  --border: rgba(255,255,255,0.12);
+  --blur: blur(18px);
+  --radius: 18px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, #182032 0%, transparent 40%),
+              radial-gradient(800px 500px at 90% 10%, #0f2b1c 0%, transparent 45%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  padding: 16px;
+  background: rgba(11,13,16,0.6);
+  backdrop-filter: var(--blur);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: 0.4s ease;
+}
+
+.nav a:hover::after { width: 100%; }
+
+.section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  filter: blur(6px);
+  opacity: 0.3;
+  transition: all 0.8s ease;
+}
+
+.section.visible {
+  filter: blur(0);
+  opacity: 1;
+}
+
+.content {
+  max-width: 800px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: var(--blur);
+  padding: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+ul { list-style: none; }
+li { margin-bottom: 10px; color: var(--muted); }
+
+.links a {
+  margin-right: 20px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+}
